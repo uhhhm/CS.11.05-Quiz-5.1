@@ -6,9 +6,9 @@ int[] myArray1 = {1,3,5,7,9};
 
 int[] myArray2 = {2,4,6,8,10,12,14,16};
 
-zip(myArray1, myArray2) → {1,3,5,7,9,2,4,6,8,10,12,14,16}
+combine(myArray1, myArray2) → {1,3,5,7,9,2,4,6,8,10,12,14,16}
 
-2. Given two arrays of integers of equal length, write a method called zip that zips together all elements in each array into one larger array. The method zip will return a new one dimensional array of integers. 
+2. Given two arrays of integers of equal length, write a method called zip that zips together all elements in each array into one larger array. The method zip will return a new one dimensional array of integers. The returned array will not necessarily be sorted.
 
 int[] myArray1 = {1,3,5,7,9};
 
