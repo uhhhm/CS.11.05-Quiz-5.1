@@ -1,5 +1,4 @@
 public class Main {
-
     /**
      * Given two arrays of integers, write a method called combine that combines the two arrays into one larger array.
      * The method combine will return a new one dimensional array of integers.
@@ -9,7 +8,14 @@ public class Main {
      */
     public static int[] combine(int[] array1, int[] array2) {
 
-        return null;
+        int[] arr = new int[array1.length+array2.length];
+        for(int i = 0; i< array1.length; i++){
+            arr[i] = array1[i];
+        }
+        for(int  i = array1.length; i<array2.length + array1.length; i++){
+            arr[i] = array2[i-array1.length];
+        }
+        return arr;
 
     }
 
@@ -21,8 +27,20 @@ public class Main {
      * zip(myArray1, myArray2) → {1,2,3,4,5,6,7,8,9,10}
      */
     public static int[] zip(int[] array1, int[] array2) {
+        int[] arr = new int[array1.length + array2.length];
+        for(int  i = 0; i < arr.length; i++){
+            if(i%2 == 0){
+                arr[i] = array1[i/2];
+            }
+            else{
+                arr[i] = array2[i/2];
+            }
+        }
 
-        return null;
+
+
+        // TimeU
+        return arr;
 
     }
 
@@ -34,8 +52,11 @@ public class Main {
      * product(myArray1, myArray2) → {2,12,30,56,90}
      */
     public static int[] product(int[] array1, int[] array2) {
-
-        return null;
+        int[] arr = new int[array1.length];
+        for(int  i = 0; i < array1.length; i++){
+            arr[i] = array1[i]*array2[i];
+        }
+        return arr;
 
     }
 
@@ -56,14 +77,23 @@ public class Main {
      * capitalCount(words) → {1, 2, 2, 0}
      */
     public static int[] capitalCount(String[] words) {
-
-        return null;
+        int[] arr = new int[words.length];
+        for(int  i = 0; i<words.length; i++){
+            arr[i] = countCapitalLetters(words[i]);
+        }
+        return arr;
 
     }
 
     public static int countCapitalLetters(String word) {
-
-        return 0;
+        int  a = 0;
+        char[] arr = word.toCharArray();
+        for(int  i = 0; i < arr.length; i++){
+            if((int) arr[i] >= 65 && (int) arr[i] <= 90){
+                a++;
+            }
+        }
+        return a;
 
     }
 
